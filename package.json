@@ -1,5 +1,29 @@
 {
+  "name": "argb2rgba",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "repository": "https://github.com/doerme/argb2rgba.git",
+  "author": "doerme <398921432@qq.com>",
+  "license": "MIT",
+  "files": ["src"],
   "devDependencies": {
-    "eslint-plugin-promise": "^5.1.0"
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-jest": "^24.4.0",
+    "husky": "4",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.1.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "eslint": "eslint --fix"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx,d.ts}": "eslint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "jest && lint-staged"
+    }
   }
 }
