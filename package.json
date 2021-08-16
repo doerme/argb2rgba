@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "eslint-plugin-promise": "^5.1.0"
+  }
+}
